@@ -1,9 +1,9 @@
-// import  express, { urlencoded } from 'express';
 const express = require('express');
 const urlencoded = require('express')
 const { default: axios } = require('axios');
+require('dotenv').config();
 
-const APIKEY = "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";
+const APIKEY = process.env.APIKEY;
 const app = express();
 const PORT = 3000;
 
