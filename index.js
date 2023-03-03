@@ -8,7 +8,7 @@ const { defineString } = require('firebase-functions/params');
 
 const APIKEY = defineString('APIKEY').value();
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const { Configuration, OpenAIApi} = require('openai');
 const configuration = new Configuration({
