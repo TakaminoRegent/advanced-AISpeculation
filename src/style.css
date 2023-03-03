@@ -19,9 +19,10 @@ body{
     width: 100%;
     text-align: center;
     /* background: #08df9e; */
-    background: #025c39;
-    /* background: #00081a; */
-}
+    /* background: #025c39; */
+    background: #2f0155;
+    /* background: #500072; */
+  }
 
 h1, h2, h3{
   color: aliceblue;
@@ -40,6 +41,7 @@ h1, h2, h3{
   top: 0;
   left: 0;
   z-index: 9999;
+  
 }
 
 .loader {
@@ -114,7 +116,7 @@ h1, h2, h3{
 #main{
     text-align: center;
     height: 100%;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .title{
@@ -155,6 +157,11 @@ h1, h2, h3{
 .make{
   padding: 15px 60px;
   margin: 10px 30px 20px 30px;
+}
+
+button{
+  position: relative;
+  z-index: 1;
 }
 
 .btn-border {
@@ -216,7 +223,7 @@ h1, h2, h3{
 }
 
 .selected_list{
-  margin-top: -60px;
+  /* margin-top: -60px; */
   height: 50px;
 }
 
@@ -271,5 +278,108 @@ a{
 
 .player2::placeholder {
   color: rgb(1, 141, 255);
-  font-weight: bold;
+  font-weight: bold;}
+.h2class{
+  margin-top: -60px;
+}
+
+.howto{
+  position:relative;
+
+}
+
+.toggle{
+  position: absolute;
+  padding: 15px 60px;
+  right: 5px;
+  top: 5px;
+  transition: all 0.5s;
+  /* background: #025c39; */
+}
+
+.show_how{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+
+  font-size: 24px;
+  padding: 20px 20px;
+  height: 700px;
+  background: white;
+  opacity: 0.9;
+  z-index: 10;
+  border-radius: 10px;
+}
+
+.h2play{
+  color:#000
+}
+
+li{
+  margin-bottom: 15px;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.aaa{
+  margin-right: 10px;
+}
+
+.point{
+  font-size: 30px;
+  margin-right: 10px;
+  color: aliceblue;
+}
+
+.new-selected{
+  color: aliceblue;
+  display: inline-block;
+  margin: 0% 1.5%;
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.result-doc {
+  margin-bottom: 0 !important;
+}
+
+.answer{
+  margin-bottom: 20px;
+}
+
+.wwwww{
+  color: aliceblue;
+  font-size: 18px;
+}
+
+.result_page{
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.result_point{
+  display: inline-block;
+  font-size: 30px;
+  color: aliceblue;
+  margin-left: 40px;
+  margin-right: 40px;
+  white-space: nowrap;
+}
+
+.aiueo{
+  padding: 15px 60px;
+}
+
+.result_img{
+  margin: 0px 0px;
 }

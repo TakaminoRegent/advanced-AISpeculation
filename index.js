@@ -30,7 +30,7 @@ async function RequestImage(words){
 }
 
 app.use(express.json());
-app.use(express.static('src'));
+app.use(express.static(__dirname + '/src'));
 app.use(urlencoded({ extended: true }));
 
 app.get('/', async (_req, res) => {
