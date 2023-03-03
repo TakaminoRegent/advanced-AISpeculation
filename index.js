@@ -3,10 +3,8 @@ const express = require('express');
 const urlencoded = require('express');
 const { default: axios } = require('axios');
 require('dotenv').config();
-const functions = require('firebase-functions');
-const { defineString } = require('firebase-functions/params');
 
-const APIKEY = defineString('APIKEY').value();
+const APIKEY = process.env.APIKEY;
 const app = express();
 const PORT = process.env.PORT || 3000;
 
