@@ -111,6 +111,7 @@ app.component(
             return {
                 a_name: "",
                 b_name: "",
+                word_list: [],
             }
         },
         methods: {
@@ -119,6 +120,15 @@ app.component(
                 if(this.b_name == "") this.b_name = "プレイヤー2";
                 QuizData.a_name = this.a_name;
                 QuizData.b_name = this.b_name;
+
+                const get = axios.get("/wordlist").then((response) => {
+                    console.log("getで送信");
+                    QuizData.word_list = response.data;
+                    console.log(QuizData);
+                }).catch((err) => {
+                    console.log("エラー");
+                    console.log(err);
+                });                
 
                 QuizData.componentId = "select-word";
             }
@@ -250,7 +260,6 @@ app.component(
                     let post = axios.post("/", { word: words }).then((response) => {
                         console.log("postで送信");
                         this.loading = false;
-                        console.log(response);
                         this.catchimg(response.data);
                     }).catch((err) => {
                         console.log("エラー");
