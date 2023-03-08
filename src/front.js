@@ -7,7 +7,7 @@ const MAXLEN = 3;
 const TIMES = 4; //繰り返す回数
 
 const QuizData = reactive({
-    word_list: ["tomato", "internet", "urban", "design", "game", "glass", "money", "book", "beach"],
+    word_list: [],
     select_list: [], //画像生成に選んだ単語リスト
     spec_list: [], //推測者が選んだリスト
     imgsrc: "",
@@ -123,8 +123,13 @@ app.component(
 
                 const get = axios.get("/wordlist").then((response) => {
                     console.log("getで送信");
-                    QuizData.word_list = response.data;
-                    console.log(QuizData);
+                    // QuizData.word_list = response.data;
+                    // QuizData.word_list.splice(0, QuizData.word_list.length);
+                    // QuizData.word_list.push(response.data);
+                    response.data.forEach(element => {
+                        QuizData.word_list.push(element);
+                    });
+                    console.log(response.data);
                 }).catch((err) => {
                     console.log("エラー");
                     console.log(err);
